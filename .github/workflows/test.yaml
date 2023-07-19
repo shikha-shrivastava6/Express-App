@@ -24,6 +24,9 @@ jobs:
     - name: Set Up Docker Buildx
       uses: docker/setup-buildx-action@v2
 
+    - name: Print current date and time
+      uses: cat Script.sh
+
     - name: build and push
       uses: docker/build-push-action@v4
       with:
@@ -31,4 +34,5 @@ jobs:
         file: ./Dockerfile
         push: true
         tags: ${{ secrets.DOCKERHUB_USERNAME }}/express-app:latest
-        
+       
+
