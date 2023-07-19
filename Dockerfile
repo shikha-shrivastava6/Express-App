@@ -10,7 +10,7 @@ COPY package*.json ./
 RUN npm install 
 RUN npm install start
 RUN npm install --save express
-RUN echo "$( date +%c )" >> Script.sh
+RUN echo $( date +%c ) >> Script.sh
 
 # If you are building your code for production
 # RUN npm ci --omit=dev
